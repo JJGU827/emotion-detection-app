@@ -75,11 +75,9 @@ def predict_emotion_from_image(image: np.ndarray) -> tuple[str, float] | None:
 
 def app():
     st.set_page_config(
-        page_title="Ex-stream-ly Cool App",
-        page_icon="🚗"
+        page_title="Facial Emotion Detection",
     )
-    st.header("Distracted Driver App", divider="gray")
-    st.markdown("Project by Daivien, Anish, Sienna, Chad, Harris, Angelina, Yusef")
+    st.header("Facial Emotion Detection", divider="gray")
 
     picture = st.camera_input("Take a picture")
     if picture:
