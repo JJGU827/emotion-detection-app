@@ -83,7 +83,7 @@ def app():
 
     picture = st.camera_input("Take a picture")
     if picture:
-        image = np.array(Image.open(image_path).convert("RGB"))
+        image = np.array(Image.open(picture).convert("RGB"))
         results = predict_emotion_from_image(image)
         if results:
             emotion, score = results
