@@ -26,7 +26,7 @@ emotion_map = {
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = models.resnet50(pretrained=False)
 model.fc = nn.Linear(model.fc.in_features, 7)
-model.load_state_dict(torch.load(os.path.join(base_dir, "trained_models/resnet50_fer2013.pth"), map_location=device))
+model.load_state_dict(torch.load(os.path.join(base_dir, "resnet50_fer2013.pth"), map_location=device))
 model.to(device)
 model.eval()
 
